@@ -4,9 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Inlogg</title>
   </head>
   <body>
+    <form action="" id="form-container">
+      <div id="div-container">
+        <h1 class="titel-inlogg">Hundklubben</h1>
+        <input
+          type="text"
+          id="username"
+          class="username input"
+          placeholder=" Användarnamn "
+        />
+        <label for="username" class="label-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
+            /></svg
+        ></label>
+        <input
+          type="text"
+          id="password"
+          class="password input"
+          placeholder="Lösenord "
+        />
+        <label for="password" class="label-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M12 17a2 2 0 0 0 2-2a2 2 0 0 0-2-2a2 2 0 0 0-2 2a2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5a5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z"
+            /></svg
+        ></label>
+        <button id="btn">Logga in</button>
+      </div>
+      <div id="text-inform">
+        <h2 class="text-inform-header">Regler</h2>
+        <p class="text-inform-pg">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus,
+          sunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Quaerat velit amet explicabo, et incidunt optio sapiente ipsam ab
+          asperiores debiti Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Nam, consequatur.
+        </p>
+      </div>
+    </form>
+
     <script src="script.js"></script>
   </body>
 </html>

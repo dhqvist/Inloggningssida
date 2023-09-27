@@ -15,31 +15,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 5rem;
 }
 .titel-inlogg {
   position: absolute;
-  top: -15rem;
+  top: -18rem;
   text-align: center;
   font-size: 7rem;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(236, 128, 12, 0.9);
   border-radius: 7px;
-  width: 40rem;
   height: 6rem;
-  margin-bottom: 15rem;
   font-family: "Playfair Display", serif;
 }
 
 #form-container {
-  min-height: 100vh;
+  color: rgba(116, 218, 20, 0.9);
+  margin-top: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#div-container {
-  height: 35rem;
-  width: 50rem;
+#form-div-container {
   position: relative;
+  width: 50rem;
   background: transparent;
   backdrop-filter: blur(2px);
   display: flex;
@@ -65,30 +65,26 @@ body {
   border-radius: 7px;
   border: none;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  box-shadow: inset 1px 1px 25px rgb(254, 255, 255);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  box-shadow: inset 20px 20px 70px rgb(20, 20, 21);
   background: transparent;
-  color: #000;
+  color: rgba(236, 128, 12, 0.9);
 }
 .input::placeholder {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 1.5rem;
 }
+
 label {
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .label-icon {
   position: relative;
-  top: -6.5rem;
+  top: -6.7rem;
   left: 12.5rem;
 }
 
-#text-inform {
-  text-align: center;
-  width: 60vh;
-  height: 5vh;
-}
 #btn {
   padding: 1rem 1rem;
   width: 16rem;
@@ -104,7 +100,7 @@ label {
 }
 
 #btn:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(236, 128, 12, 0.9);
   cursor: pointer;
   color: #fff;
   box-shadow: inset black 2px 2px 10px;
@@ -112,18 +108,24 @@ label {
 }
 #btn:active {
   box-shadow: black 5px 5px 1px;
+  color: rgba(255, 0, 0, 0.3);
 }
-#text-inform {
+#text-inform-container {
   width: 60rem;
+  text-align: center;
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
 }
 .text-inform-header {
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 3.5rem;
+  color: #000;
+  font-size: 4rem;
   margin-bottom: 1rem;
   font-family: "Playfair Display", serif;
+  border-bottom: 2px solid rgba(236, 128, 12, 0.7);
 }
 .text-inform-pg {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  font-weight: bold;
   color: #000;
 }
 @media (max-width: 606px) {
@@ -131,18 +133,18 @@ label {
     height: 100%;
   }
   #form-container {
-    margin-top: 20rem;
+    margin-top: 25rem;
   }
-  #div-container {
+  #form-div-container {
     width: 80%;
   }
-  #text-inform {
+  #text-inform-container {
     width: 80%;
-    margin-bottom: auto;
+    margin-bottom: 10rem;
   }
   .titel-inlogg {
-    width: 80%;
-    font-size: 4rem;
+    width: 30rem;
+    font-size: 4.5rem;
     top: -15rem;
   }
   .input {
@@ -154,5 +156,17 @@ label {
     position: relative;
     top: -6.5rem;
     left: 9.5rem;
+  }
+}
+@media (max-width: 485px) {
+  body {
+    background-position: center;
+  }
+}
+@media (max-width: 310px) {
+  .titel-inlogg {
+    font-size: 3.5rem;
+    width: 25rem;
+    top: -12rem;
   }
 }

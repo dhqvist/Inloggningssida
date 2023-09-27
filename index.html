@@ -13,16 +13,17 @@
     <title>Inlogg</title>
   </head>
   <body>
-    <form action="" id="form-container">
-      <div id="div-container">
+    <form for="" id="form-container">
+      <div id="form-div-container">
         <h1 class="titel-inlogg">Hundklubben</h1>
         <input
           type="text"
           id="username"
           class="username input"
           placeholder=" Användarnamn "
+          required
         />
-        <label for="username" class="label-icon"
+        <label for="username" class="label-icon label-username"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -39,8 +40,9 @@
           id="password"
           class="password input"
           placeholder="Lösenord "
+          required
         />
-        <label for="password" class="label-icon"
+        <label for="password" class="label-icon password-label"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -54,17 +56,17 @@
         ></label>
         <button id="btn">Logga in</button>
       </div>
-      <div id="text-inform">
-        <h2 class="text-inform-header">Regler</h2>
-        <p class="text-inform-pg">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus,
-          sunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Quaerat velit amet explicabo, et incidunt optio sapiente ipsam ab
-          asperiores debiti Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Nam, consequatur.
-        </p>
-      </div>
     </form>
+    <section id="text-inform-container">
+      <h2 class="text-inform-header">Regler</h2>
+      <p class="text-inform-pg">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus,
+        sunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+        velit amet explicabo, et incidunt optio sapiente ipsam ab asperiores
+        debiti Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam,
+        consequatur.
+      </p>
+    </section>
 
     <script src="script.js"></script>
   </body>

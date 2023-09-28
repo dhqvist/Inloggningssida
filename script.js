@@ -1,26 +1,29 @@
+// Selecting elements and setting to constants
 const formSelect = document.getElementById("form-container");
 const divSelect = document.getElementById("form-div-container");
 const bodySelect = document.querySelector("body");
 const mainHeaderSelect = document.querySelector(".titel-inlogg");
 const informContainerSelect = document.getElementById("text-inform-container");
-let textHeader = document.querySelector(".text-inform-header");
-let informText = document.querySelector(".text-inform-pg");
-const btnName = document.getElementById("btn");
-
+const textHeader = document.querySelector(".text-inform-header");
+const informText = document.querySelector(".text-inform-pg");
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 
+// Setting the username and password
 const namn = "Bella";
 const lösenord = "qwe123";
+// local storage
+const theUser = localStorage.getItem("username");
+const thePassword = localStorage.getItem("password");
+// Button
+const btnName = document.getElementById("btn");
 
-const användarnamn = localStorage.getItem("username");
-const lösen = localStorage.getItem("password");
-
-if ((användarnamn, lösen)) {
+//The if statements
+if ((theUser, thePassword)) {
   cleanDiv();
-  OnlineUserStyle();
+  onlineUserStyle();
 }
-
+//Button click function with if/else if statements to decide what happens depending on what the user do
 btnName.addEventListener("click", function (event) {
   if (
     btnName.innerHTML === "Logga in" &&
@@ -30,7 +33,7 @@ btnName.addEventListener("click", function (event) {
     localStorage.setItem("username", usernameInput.value);
     localStorage.setItem("password", passwordInput.value);
     cleanDiv();
-    OnlineUserStyle();
+    onlineUserStyle();
   } else if (btnName.innerHTML === "Logga ut") {
     localStorage.clear();
     location.reload();
@@ -42,7 +45,7 @@ btnName.addEventListener("click", function (event) {
     wrongLogInStyle();
   }
 });
-
+// functions for styling
 function cleanDiv() {
   usernameInput.style.display = "none";
   passwordInput.style.display = "none";
@@ -50,7 +53,7 @@ function cleanDiv() {
   document.querySelector(".password-label").style.display = "none";
 }
 
-function OnlineUserStyle() {
+function onlineUserStyle() {
   let formWelcomeText = document.createElement("p");
   divSelect.appendChild(formWelcomeText);
   formWelcomeText.id = "welcome-text";
@@ -94,6 +97,7 @@ function OnlineUserStyle() {
 
   informText.innerHTML = "";
 }
+
 function wrongLogInStyle() {
   let formErrorText = document.createElement("p");
   divSelect.appendChild(formErrorText);
